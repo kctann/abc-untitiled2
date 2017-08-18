@@ -6,7 +6,7 @@ var path = require('path');
 var port = process.env.PORT || 8080;
 
 app.get('/HelloWorld', function(req, res) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:63342');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     var filedata = null;
     var name = req.param('name') || 'Somebody';
     var respondWith = '<?xml version="1.0" encoding="UTF-8"?>';
