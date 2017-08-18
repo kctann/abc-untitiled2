@@ -3,6 +3,8 @@ var app = express();
 var fs = require('fs');
 var path = require('path');
 
+var port = process.env.PORT || 8080;
+
 app.get('/HelloWorld', function(req, res) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:63342');
     var filedata = null;
@@ -20,4 +22,4 @@ app.get('/HelloWorld', function(req, res) {
     res.status(200);
     res.setHeader('Content-type', 'Application/json');
     return res.sendFile(path.resolve('source/1.json'));
-}).listen(80);
+}).listen(port);
