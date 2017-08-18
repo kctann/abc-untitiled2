@@ -22,4 +22,11 @@ app.get('/HelloWorld', function(req, res) {
     res.status(200);
     res.setHeader('Content-type', 'Application/json');
     return res.sendFile(path.resolve('source/1.json'));
-}).listen(port);
+});
+
+app.get('/HerokuTest', function(req, res) {
+	res.write('HerokuTest');
+	res.end();
+});
+
+app.listen(port);
